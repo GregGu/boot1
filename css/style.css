@@ -52,21 +52,30 @@ h1, h2, h3, h4, h5{
   
 }
 
+
 /* unvisited link */
 .btn {
   color:black;
   background-color:#E6E6FA; important;
 }
+.mystyle{
+  background-color: coral;
+}
+
 /* mouse over link */
 .btn:hover {
+  color:black;
+  background-color:#20B2AA; important;
+  background-color: coral;
+}
+
+.btn:active {
   color:black;
   background-color:#20B2AA; important;
   border-color:black;
 }
 
-.btn:focus{
-   background-color:#20B2AA;
-}
+
 .btn:active{
   background-color:#20B2AA !important;
 }

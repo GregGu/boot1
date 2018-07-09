@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script>
+function myFunction1() {
+     var element = document.getElementById("demo1");
+      element.classList.toggle("mystyle");
+}
 
+function myFunction2() {
+     var element = document.getElementById("demo2");
+
+      element.classList.toggle("mystyle");
+}
+function myFunction3() {
+     var element = document.getElementById("demo3");
+      element.classList.toggle("mystyle");
+}
+
+</script>
   <head>
 
     <meta charset="utf-8">
@@ -80,25 +96,25 @@
         <div classs="pull-right">
           <div class="row">
               <div>
-              <button id="myb" class="btn btn-small btn-light btn-primary" data-toggle="portfilter" data-target="all">All</button>
+              <button id="demo1" class="btn btn-small btn-light btn-primary" data-toggle="portfilter" data-target="all" onclick="myFunction1()">All</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="fun">Fun stats stuff</button>
+              <button id="demo2" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fun" onclick="myFunction2()">Fun stats stuff</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="child">Child mortality</button>
+              <button id="demo3" class="btn btn-small btn-light" data-toggle="portfilter" data-target="child" onclick="myFunction3()">Child mortality</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="fam">Family planning</button>
+              <button id="demo4" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fam">Family planning</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="fert">Fertility</button>
+              <button id="demo5" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fert">Fertility</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="mat">Maternal mortality</button>
+              <button id="demo6" class="btn btn-small btn-light" data-toggle="portfilter" data-target="mat">Maternal mortality</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="hiv">HIV/AIDS</button>
+              <button id="demo7" class="btn btn-small btn-light" data-toggle="portfilter" data-target="hiv">HIV/AIDS</button>
               </div>
               <div>
               <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="pop">Population projections</button>
@@ -1274,7 +1290,7 @@ Abstract
           </div>
 
           <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-          <script src="vendor/bootstrap/js/bootstrap-portfilter.min.js"></script>
+          <script src="vendor/bootstrap/js/bootstrap-portfilter.js"></script>
 
 
 
