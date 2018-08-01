@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <script>
-function myFunction1() {
-     var element = document.getElementById("demo1");
+function myFunction(j) {
+     var element = document.getElementById("demo"+j);
       element.classList.toggle("mystyle");
+      for (i = 0; i < 9; i++) { 
+        if (i != j){
+          var element = document.getElementById("demo" + i );
+          element.classList.remove("mystyle");
+        }
+      }
 }
 
-function myFunction2() {
-     var element = document.getElementById("demo2");
 
-      element.classList.toggle("mystyle");
-}
-function myFunction3() {
-     var element = document.getElementById("demo3");
-      element.classList.toggle("mystyle");
-}
+
+
 
 </script>
   <head>
@@ -96,31 +96,33 @@ function myFunction3() {
         <div classs="pull-right">
           <div class="row">
               <div>
-              <button id="demo1" class="btn btn-small btn-light btn-primary" data-toggle="portfilter" data-target="all" onclick="myFunction1()">All</button>
+              <button id="demo0" class="btn btn-small btn-light btn-primary" data-toggle="portfilter" data-target="all" onclick="myFunction(0)">All</button>
               </div>
               <div>
-              <button id="demo2" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fun" onclick="myFunction2()">Fun stats stuff</button>
+              <button id="demo1" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fun" onclick="myFunction(1)">Fun stats stuff</button>
               </div>
               <div>
-              <button id="demo3" class="btn btn-small btn-light" data-toggle="portfilter" data-target="child" onclick="myFunction3()">Child mortality</button>
+              <button id="demo2" class="btn btn-small btn-light" data-toggle="portfilter" data-target="child" onclick="myFunction(2)">Child mortality</button>
               </div>
               <div>
-              <button id="demo4" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fam">Family planning</button>
+              <button id="demo3" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fam" onclick="myFunction(3)">Family planning</button>
               </div>
               <div>
-              <button id="demo5" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fert">Fertility</button>
+              <button id="demo4" class="btn btn-small btn-light" data-toggle="portfilter" data-target="fert" onclick="myFunction(4)">Fertility</button>
               </div>
               <div>
-              <button id="demo6" class="btn btn-small btn-light" data-toggle="portfilter" data-target="mat">Maternal mortality</button>
+              <button id="demo5" class="btn btn-small btn-light" data-toggle="portfilter" data-target="mat" onclick="myFunction(5)">Maternal mortality</button>
               </div>
               <div>
-              <button id="demo7" class="btn btn-small btn-light" data-toggle="portfilter" data-target="hiv">HIV/AIDS</button>
+              <button id="demo6" class="btn btn-small btn-light" data-toggle="portfilter" data-target="hiv" onclick="myFunction(6)">HIV/AIDS</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="pop">Population projections</button>
+              <button id="demo7" class="btn btn-small btn-light" data-toggle="portfilter" data-target="pop"
+              onclick="myFunction(7)">Population projections</button>
               </div>
               <div>
-              <button class="btn btn-small btn-light" data-toggle="portfilter" data-target="abo">Unintended pregnancies and abortion</button>
+              <button id="demo8" class="btn btn-small btn-light" data-toggle="portfilter" data-target="abo"
+              onclick="myFunction(8)">Unintended pregnancies and abortion</button>
               </div>
               <br>
               <br>
@@ -128,7 +130,8 @@ function myFunction3() {
         </div>
         <div class="clearfix"></div>
 
-           <div class="card mb-4" data-tag='child'>
+           <div class="card mb-4" data-tag="fun child">
+
             <div class="card-body">
               <p class="card-title" data-toggle="collapse" data-target="#demo35">
               <a><strong>National and regional under-5 mortality rate by

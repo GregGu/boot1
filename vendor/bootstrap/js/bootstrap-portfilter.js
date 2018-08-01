@@ -51,8 +51,12 @@
     this.stuff
         .fadeOut('fast').promise().done(function(){
             $(this).each(function(){
-                if($(this).data('tag') == target || target == 'all') 
+                var tags = $(this).data('tag').split(" ");
+                for (var i = 0; i < tags.length; i++) { 
+                  if(tags[i] == target || target == 'all') 
                     items.push(this);
+                }
+                
             });
             $(items).show()
         });  
